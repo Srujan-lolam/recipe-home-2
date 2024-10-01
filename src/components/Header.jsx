@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/header.css';
 import logo from '../assets/logo.webp'
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,6 +25,7 @@ const Header = () => {
       <div className="header__logo">
         <img src={logo} alt="Recipe Platform Logo" />
         <h1>RecipePlatform</h1>
+        <button><Link to = '/recipeform'>Create a new Recipe</Link></button>
       </div>
       <div className="header__search">
         <input type="text" placeholder="Search for recipes..." />
